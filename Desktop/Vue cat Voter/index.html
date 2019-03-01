@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Vue</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="//unpkg.com/vue"></script>
+
+    <script type="text/javascript" src="/js/lib/dummy.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+    <style id="compiled-css" type="text/css">
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        
+        .container {
+            max-width: 80%;
+            margin: 0 auto;
+        }
+        
+        h3,
+        p {
+            margin: 0;
+        }
+        
+        .post {
+            display: flex;
+            background: #D3D3D3;
+            padding: .5em;
+            margin-bottom: .5em;
+            border-radius: .25em;
+            align-items: center;
+        }
+        
+        .form {
+            margin-bottom: .5em;
+        }
+        
+        .post>div:not(:first-child) {
+            padding-left: 1em;
+        }
+        
+        span {
+            font-size: 1.5em;
+            padding: 5px;
+            cursor: pointer;
+        }
+        
+        .votes {
+            font-size: .75em;
+        }
+    </style>
+
+
+    <!-- TODO: Missing CoffeeScript 2 -->
+
+    <script type="text/javascript">
+        window.onload = function() {
+
+            const example = new Vue({
+                el: '#app',
+                data: {
+                    title: 'The Best Cat in the World',
+                    summary: 'Sadam',
+                    thumbnail: 'https://placeimg.com/75/75/any',
+                    alt: 'a cat',
+                    votes: 0,
+
+
+                },
+                methods: {
+                    increment: function(votes) {
+                        this.votes++
+                    },
+                    decrement: function(votes) {
+                        this.votes--
+                    }
+
+                }
+            })
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <body>
+        <div id="app" class="container">
+            <h1>Skimmit News</h1>
+            <div class="post">
+                <div id="voteCounter">
+                    <span v-on:click="increment">+</span>
+                    <span v-on:click="decrement">-</span>
+                    <p class="votes">{{votes}}</p>
+                </div>
+                <div><img v-bind:src=thumbnail alt="Placeholder image"></div>
+                <div class="post-info">
+                    <h3>{{title}}</h3>
+                    <p>{{summary}}</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    </body>
+
+
+
+    <script>
+        // tell the embed parent frame the height of the content
+        if (window.parent && window.parent.parent) {
+            window.parent.parent.postMessage(["resultsFrame", {
+                height: document.body.getBoundingClientRect().height,
+                slug: "egprb431"
+            }], "*")
+        }
+
+        // always overwrite window.name, in case users try to set it manually
+        window.name = "result"
+    </script>
+</body>
+
+</html>
