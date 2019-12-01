@@ -1,0 +1,143 @@
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --green: #1A8B9C;
+            --white: #ffffff;
+        }
+        
+        body {
+            background-color: #131628;
+            background-image: url("../images/Oval\ looper\ Copy.svg");
+            background-size: cover;
+        }
+        
+        .container {
+            padding-right: 5rem;
+            padding-left: 5rem;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+        }
+        
+        .logo {
+            background-repeat: none;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 5rem;
+            font-size: 1.3rem;
+            font-family: Lato;
+            cursor: pointer;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        
+        .btn-prm {
+            color: var(--white);
+            background-color: var(--green);
+        }
+        
+        .btn-sec:before {
+            content: url(../images/icon.svg);
+            display: inline-block;
+            padding-right: 10px;
+            vertical-align: middle;
+            font-size: 10px;
+        }
+        
+        .btn-sec {
+            margin-top: 5rem;
+            padding: 0.8rem 2rem;
+            color: var(--green);
+            background-color: var(--white);
+            width: 18rem;
+            font-size: 1.3rem;
+            vertical-align: middle;
+        }
+        
+        .main-header {
+            /* Fastest & Easiest way to Exchange XLM */
+            font-family: Muli;
+            font-size: 2.8rem;
+            letter-spacing: 0.1rem;
+            font-weight: bold;
+            color: var(--white);
+            margin-top: 10rem;
+        }
+        
+        .main-txt {
+            /* Cash out helps you exchange your tokens on Keybase easily. */
+            font-family: Lato;
+            font-weight: normal;
+            font-size: 1.3rem;
+            /* White */
+            color: #FFFFFF;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .light {
+            font-weight: lighter;
+        }
+        /* ------------------------CSS GRID-------------------------------*/
+        
+        .row {
+            display: flex;
+        }
+        
+        .column {
+            flex: 50%;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .input_container {
+            position: relative;
+            padding: 0 0 0 20px;
+            margin: 0 20px;
+            background: #ddd;
+            direction: rtl;
+            width: 200px;
+        }
+        
+        .input {
+            margin: 0;
+            padding-right: 30px;
+            color: var(--white);
+            background: none;
+            padding: 20px 20px;
+            border: 1px solid var(--white);
+            border-radius: 3px;
+            display: flex;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        
+        .input-img {
+            height: 24px;
+            margin-top: 5rem;
+            ;
+        }
+        
+        .green-border-big {
+            margin-bottom: 2.2rem;
+            background-color: var(--green);
+            width: 9rem;
+            padding: .1rem;
+        }
